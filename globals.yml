@@ -12,7 +12,7 @@
 config_strategy: "COPY_ONCE"
 
 # Valid options are ['centos', 'debian', 'rhel', 'ubuntu']
-kolla_base_distro: "ubuntu"
+kolla_base_distro: "centos"
 
 # Valid options are [ binary, source ]
 kolla_install_type: "source"
@@ -28,7 +28,7 @@ openstack_release: "train"
 # All-In-One without haproxy and keepalived, you can set enable_haproxy to no
 # in "OpenStack options" section, and set this value to the IP f your
 # 'network_interface' as set in the Networking section below.
-kolla_internal_vip_address: "192.168.1.151"
+kolla_internal_vip_address: "192.168.1.118"
 
 # This is the DNS name that maps to the kolla_internal_vip_address VIP. By
 # default it is the same as kolla_internal_vip_address.
@@ -87,7 +87,7 @@ docker_configure_for_zun: "no"
 # Yet another way to workaround the naming problem is to create a bond for the
 # interface on all hosts and give the bond name here. Similar strategy can be
 # followed for other types of interfaces.
-network_interface: "ens33"
+network_interface: "enp2s0"
 
 # These can be adjusted for even more customization. The default is the same as
 # the 'network_interface'. These interfaces must contain an IP address.
@@ -219,8 +219,9 @@ enable_haproxy: "no"
 #enable_ceilometer_ipmi: "no"
 #enable_cells: "no"
 #enable_central_logging: "no"
+
 #enable_chrony: "yes"
-enable_cinder: "no"
+enable_cinder: "yes"
 #enable_cinder_backup: "yes"
 #enable_cinder_backend_hnas_nfs: "no"
 #enable_cinder_backend_iscsi: "{{ enable_cinder_backend_lvm | bool or enable_cinder_backend_zfssa_iscsi | bool }}"
