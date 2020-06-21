@@ -192,7 +192,7 @@ openstack_region_name: "CH-PRS-1"
 ###################
 # Use these options to set the various log levels across all OpenStack projects
 # Valid options are [ True, False ]
-openstack_logging_debug: "False"
+openstack_logging_debug: "True"
 
 # Enable core OpenStack services. This includes:
 # glance, keystone, neutron, nova, heat, and horizon.
