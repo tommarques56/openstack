@@ -339,7 +339,7 @@ enable_vitrage: "yes"
 #enable_vmtp: "no"
 enable_watcher: "yes"
 #enable_zookeeper: "{{ enable_kafka | bool }}"
-enable_zun: "no"
+enable_zun: "yes"
 
 
 ##################
